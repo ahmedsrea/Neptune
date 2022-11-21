@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+.intro {
+  background: url('http://demo.neptuneapp.xyz/assets/media/svg/illustrations/landing.svg');
+  background-color: #13263c;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+.nav__links {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: -1px;
+  z-index: 2;
+  height: 100vh;
+  width: 250px;
+  background: #ffffff;
+  transform: translateX(-250px);
+  transition: transform 0.3s;
+}
+.nav--open .nav__links {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.nav__overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.nav--open .nav__overlay {
+  visibility: visible;
+  opacity: 1;
+}
+/* Start Slider */
+#slider {
+  width: 60vw;
+  margin: 20px auto 0;
+  overflow: hidden;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+/* End Slider */
